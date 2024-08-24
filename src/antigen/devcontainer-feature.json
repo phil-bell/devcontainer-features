@@ -1,0 +1,21 @@
+{
+    "name": "Antigen",
+    "id": "antigen",
+    "version": "1.0.0",
+    "description": "Install Antigen bundles and themes",
+    "options": {
+        "theme": {
+            "type": "string",
+            "default": "robbyrussell",
+            "description": "theme to be installed"
+        },
+        "bundles":{
+            "type": "string",
+            "default": "",
+            "description": "space seperated list of antigen bundles to install"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/nils-geistmann/devcontainers-features/zsh:0"
+    ]
+}
