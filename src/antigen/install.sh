@@ -31,3 +31,5 @@ else
   echo "antigen bundle ${BUNDLES}" >> $USER_LOCATION/.zshrc
 fi
 
+echo "Setting antigen to apply"
+echo "antigen apply" >> $USER_LOCATION/.zshrc
