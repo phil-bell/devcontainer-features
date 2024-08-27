@@ -1,7 +1,7 @@
 {
     "name": "Antigen",
     "id": "antigen",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install Antigen bundles and themes",
     "options": {
         "theme": {
