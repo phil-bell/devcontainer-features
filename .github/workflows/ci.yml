@@ -10,3 +10,4 @@ jobs:
       uses: devcontainers/action@v1
       with:
         publish-features: "true"
+        base-path-to-templates: "./src"
