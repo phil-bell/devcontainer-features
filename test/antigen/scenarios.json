@@ -1,0 +1,24 @@
+{
+    "theme_is_set": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "antigen": {
+                "theme": "spaceship-prompt/spaceship-prompt"
+            }
+        }
+    },
+    "bundles_are_added": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "antigen": {
+                "bundles": "git docker"
+            }
+        }
+    },
+    "bundles_are_not_set": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "antigen": {}
+        }
+    }
+}

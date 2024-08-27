@@ -1,0 +1,17 @@
+
+on: push
+
+jobs:
+  publish:    
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: devcontainers/action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        publish-features: "true"
+        base-path-to-features: "./src"
