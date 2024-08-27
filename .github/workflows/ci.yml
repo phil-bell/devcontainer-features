@@ -1,0 +1,11 @@
+
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Publish Features"
+      uses: devcontainers/action@v1
+      with:
+        publish-features: "true"
