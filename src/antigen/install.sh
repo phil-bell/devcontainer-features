@@ -17,6 +17,10 @@ fi
 echo "Installing antigen to $USER_LOCATION/antigen.zsh"
 echo "source $USER_LOCATION/antigen.zsh" >> $USER_LOCATION/.zshrc
 
+echo "Setting oh-my-zsh"
+echo "antigen use oh-my-zsh" >> $USER_LOCATION/.zshrc
+
+
 if [ -z "${THEME}" ]; then
   echo "No theme set"
 else
