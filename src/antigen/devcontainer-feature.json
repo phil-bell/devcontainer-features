@@ -12,7 +12,7 @@
         "bundles":{
             "type": "string",
             "default": "",
-            "description": "space seperated list of antigen bundles to install"
+            "description": "comma seperated list of antigen bundles to install"
         }
     },
     "installsAfter": [
