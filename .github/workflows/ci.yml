@@ -7,6 +7,7 @@ jobs:
       packages: write
       contents: write
       actions: write  
+      pull-requests: write
     runs-on: ubuntu-latest
     # if: github.event_name == 'pull_request' && github.event.action == 'closed'
     steps:
