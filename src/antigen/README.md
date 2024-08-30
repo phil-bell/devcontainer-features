@@ -1,11 +1,9 @@
-# devcontainer-features
-repo of dev container features
 
-## Antigen
+# Antigen
 
 A dev container feature for managing antigen theme and bundles for zsh.
 
-### Example Usage
+## Example Usage
 
 ```json
 "features": {
@@ -19,9 +17,11 @@ A dev container feature for managing antigen theme and bundles for zsh.
 }
 ```
 
-### Options
+## Options
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | theme | Theme to be installed | string | robbyrussell |
 | bundles | comma seperated list of antigen bundles to install | string | "" |
+
+
