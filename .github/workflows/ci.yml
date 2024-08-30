@@ -3,11 +3,7 @@ on: push
 
 jobs:
   publish:    
-    permissions:
-      packages: write
-      contents: write
-      actions: write  
-      pull-requests: write
+    permissions: write-all
     runs-on: ubuntu-latest
     # if: github.event_name == 'pull_request' && github.event.action == 'closed'
     steps:
