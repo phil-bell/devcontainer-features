@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 echo "Finding current user"
@@ -17,6 +17,10 @@ fi
 echo "Installing antigen to $USER_LOCATION/antigen.zsh"
 echo "source $USER_LOCATION/antigen.zsh" >> $USER_LOCATION/.zshrc
 
+echo "Setting oh-my-zsh"
+echo "antigen use oh-my-zsh" >> $USER_LOCATION/.zshrc
+
+
 if [ -z "${THEME}" ]; then
   echo "No theme set"
 else
@@ -24,10 +28,17 @@ else
   echo "antigen theme ${THEME}" >> $USER_LOCATION/.zshrc
 fi
 
+echo "Bundles found: ${BUNDLES}"
 if [ -z "${BUNDLES}"  ]; then
   echo "No bundles set"
 else
-  echo "Installing plugins: ${BUNDLES}"
-  echo "antigen bundle ${BUNDLES}" >> $USER_LOCATION/.zshrc
-fi
+  echo "Bundles found: ${BUNDLES}"
+  IFS=', ' read -r -a array <<< "$BUNDLES"
 
+  for bundle in ${array[@]}; do
+    echo "Installing plugins: ${bundle}"
+    echo "antigen bundle ${bundle}" >> $USER_LOCATION/.zshrc
+  done 
+fi
+echo "Setting antigen to apply"
+echo "antigen apply" >> $USER_LOCATION/.zshrc
